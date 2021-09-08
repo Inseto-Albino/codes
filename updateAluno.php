@@ -29,11 +29,11 @@ else {
     <input type="hidden" name="id" value="<?=$info->getId();?>">
     <label>
         Pergunta: 
-        <input type="text" name="aluno" value="<?=$info->getAluno();?>">
+        <input type="text" name="aluno" value="<?=$info->getNome();?>">
     </label><br><br>
     <label>
         Resposta: 
-        <input type="text" name="aluno" value="<?=$info->getAluno();?>">
+        <input type="text" name="aluno" value="<?=$info->getTurma();?>">
     </label><br><br>
   
     <input type="submit" value="Salvar">
