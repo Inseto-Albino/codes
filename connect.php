@@ -22,10 +22,10 @@ $lista = $movDao->findAll();
     <a href="updateAluno.php?id=<?=$aluno->getId();?>"> [Editar]  </a>
     <a href="deleteAluno.php?id=<?=$aluno->getId();?>">  [Excluir]</a>
     <tr>
-        <td><?=$aluno->getAluno();?></td>    
+        <td><?=$aluno->getNome();?></td>    
     </tr>
     <tr>
-        <td><?=$aluno->getAluno();?></td>
+        <td><?=$aluno->getTurma();?></td>
     </tr>
 </table><br>
 <?php endforeach; ?>
