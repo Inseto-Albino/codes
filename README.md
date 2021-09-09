@@ -1,9 +1,9 @@
 # codes
 
-Olá a todos os colaboradores ;D
+P: Olá a todos os colaboradores ;D
 
-Se você ler isso, diga que você leu
+P: Se você ler isso, diga que você leu
 
-Abraço
+P: Abraço
 
-Salve Salve Família
+R: Salve Salve Família
