@@ -12,8 +12,8 @@
         <input type="text" name="nome">
     </label><br><br>
     <label>
-        Curso: 
-        <input type="text" name="curso">
+        Turma: 
+        <input type="text" name="turma">
     </label><br><br>
   
     <input type="submit" value="Adicionar">
