@@ -28,12 +28,12 @@ else {
 <form method="POST" action="updateAluno_action.php">
     <input type="hidden" name="id" value="<?=$info->getId();?>">
     <label>
-        Pergunta: 
-        <input type="text" name="aluno" value="<?=$info->getNome();?>">
+        Aluno: 
+        <input type="text" name="nome" value="<?=$info->getNome();?>">
     </label><br><br>
     <label>
-        Resposta: 
-        <input type="text" name="aluno" value="<?=$info->getTurma();?>">
+        Turma: 
+        <input type="text" name="turma" value="<?=$info->getTurma();?>">
     </label><br><br>
   
     <input type="submit" value="Salvar">
