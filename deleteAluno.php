@@ -1,7 +1,7 @@
 <?php
 
 require 'connect.php';
-require_once 'dao/AlunoDaoMysql.php';
+require_once 'C:/xampp/htdocs/NovoSiga/dao/AlunoDaoMysql.php';
 
 $alunoDao = new AlunoDaoMysql($pdo);
 
