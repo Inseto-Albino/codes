@@ -1,7 +1,7 @@
 <?php
 
 require_once 'connect.php';
-require_once 'dao/AlunoDaoMysql.php';
+require_once 'C:/xampp/htdocs/NovoSiga/dao/AlunoDaoMysql.php';
 
 
 $movDao = new AlunoDaoMysql($pdo);
@@ -9,8 +9,7 @@ $lista = $movDao->findAll();
 
 
 ?>
-
-
+  
 <a href="addAluno.php">Adicionar Aluno</a><br><br>
 
 
@@ -25,8 +24,13 @@ $lista = $movDao->findAll();
         <td><?=$aluno->getNome();?></td>    
     </tr>
     <tr>
-        <td><?=$aluno->getTurma();?></td>
+        <td><?=$aluno->getCurso();?></td>    
+    </tr>
+    <tr>
+        <td>Turma <?=$aluno-> getTurma();?></td>
     </tr>
 </table><br>
 <?php endforeach; ?>
+</div>
+</div>
 <br><br><br>
