@@ -1,34 +1,31 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "novosiga";
 
-require_once 'connect.php';
-require_once 'dao/AlunoDaoMysql.php';
+// Create connection
+$connect = new mysqli($servername, $username, $password);
 
+// Check connection
+if ($connect->connect_error) {
+    die("Connection failed: " . $connect->connect_error);
+}
 
-$movDao = new AlunoDaoMysql($pdo);
-$lista = $movDao->findAll();
+// Create database
+$sql = "CREATE DATABASE " .$dbname;
 
+$connect = new mysqli($servername, $username, $password, $dbname);
 
-?>
-
-
-<a href="addAluno.php">Adicionar Aluno</a><br><br>
-
-
-<?php foreach ($lista as $aluno):?>
-<table border="1" width="40%">
-    <tr>
-        Aluno <?=$aluno->getId();?>     
-    </tr>
-    <a href="updateAluno.php?id=<?=$aluno->getId();?>"> [Editar]  </a>
-    <a href="deleteAluno.php?id=<?=$aluno->getId();?>">  [Excluir]</a>
-    <tr>
-        <td><?=$aluno->getNome();?></td>    
-    </tr>
-    <tr>
-        <td><?=$aluno->getTurma();?></td>
-    </tr>
-</table><br>
-<?php endforeach; ?>
-<br><br><br>
+$base = 'http://localhost/NovoSiga/codes';
 
 
+$pdo = new PDO("mysql:dbname=".$dbname.";host=".$servername, $username, $password);
+
+$sql2 = "CREATE TABLE novosiga (
+    id INT(3) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(80) NOT NULL,
+    turma VARCHAR(50) NOT NULL,
+    curso VARCHAR(50) NOT NULL,
+    reg_date TIMESTAMP
+  )";
