@@ -1,7 +1,7 @@
 <?php
 require_once 'connect.php';
-require_once 'models/Aluno.php';
-require_once 'dao/AlunoDaoMysql.php';
+require_once 'C:/xampp/htdocs/NovoSiga/models/Aluno.php';
+require_once 'C:/xampp/htdocs/NovoSiga/dao/AlunoDaoMysql.php';
 
 
 $alunoDao = new AlunoDaoMysql($pdo);
@@ -9,13 +9,14 @@ $alunoDao = new AlunoDaoMysql($pdo);
 
 $nomeDescription = filter_input(INPUT_POST, 'nome');
 $turmaDescription = filter_input(INPUT_POST, 'turma');
+$cursoDescription = filter_input(INPUT_POST, 'curso');
 
 
-
-if ($nomeDescription && $turmaDescription){
-    $aluno = new Question();
+if ($nomeDescription  && $turmaDescription && $cursoDescription){
+    $aluno = new Aluno();
     $aluno->setNome($nomeDescription);
     $aluno->setTurma($turmaDescription);
+    $aluno->setCurso($cursoDescription);
 
 
     $alunoDao->addAluno($aluno);   
@@ -23,7 +24,7 @@ if ($nomeDescription && $turmaDescription){
     header ("Location: ".$base);
     exit;
 }
-header("Location: addAluno.php");
+header("Location: codes/addAluno.php");
 exit;
 
 
